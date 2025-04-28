@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-container">
+        <h1>Lecture Video Player</h1>
+        <div class="player">
+            <video id="video" controls>
+                <source src="videos/your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">0.00% watched</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sidebar for progress information -->
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
