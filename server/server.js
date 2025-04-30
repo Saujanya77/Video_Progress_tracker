@@ -5,13 +5,13 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-DB_URI= "mongodb+srv://dassaujanya1911:rIKoiFSnKRPttXl3@cluster0.c2gbbn3.mongodb.net/Progress?retryWrites=true&w=majority&appName=Cluster0" ;
+
 
 // Log MongoDB URI to make sure it's being loaded correctly
-console.log('MongoDB URI:', DB_URI);
+console.log('MongoDB URI:', process.env.DB_URI);
 
 // MongoDB Atlas connection using the URI from .env file
-mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Atlas connected'))
   .catch((error) => console.error('MongoDB connection error:', error));
 
